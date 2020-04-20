@@ -1,0 +1,22 @@
+<h1>Add New Driver</h1>
+
+<%= form_with scope: :driver, url: drivers_path, local: true do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+ 
+   <p>
+    <%= form.label :team %><br>
+    <%= form.text_field :team %>
+  </p>
+ 
+  <p>
+    <%= form.label :profile %><br>
+    <%= form.text_area :profile %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
