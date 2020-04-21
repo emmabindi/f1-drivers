@@ -1,6 +1,16 @@
 <h1>Edit Driver</h1>
+  <%= form_with model: @driver, local: true do |form| %>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+    <%= form.label :team %>
+    <%= form.text_field :team %>
+    <%= form.label :profile %>
+    <%= form.text_field :profile %>
+    <%= form.submit %>
+  <% end %>
 
-<form action="<%= driver_path(@driver.id) %>" method="POST" >
+<%# old html way %>
+<!-- <form action="<%= driver_path(@driver.id) %>" method="POST" >
   <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token" />
 
     <input type="hidden" name="_method" value="put" />
@@ -15,4 +25,4 @@
   <input type="text" name="driver[profile]" value="<%= @driver["profile"] %>" />
 
   <input type="submit" value="Update" />
-</form>
+</form> -->

@@ -1,0 +1,42 @@
+// Place all the styles related to the Drivers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+a {
+  // color: ;
+  text-decoration: none;
+}
+
+img {
+  max-width: 190px;
+  height: 190px;
+}
+
+.box {
+  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+}
+
+#driver-card {
+  max-width: 200px;
+  justify-content: center;
+  // background-color: red;
+}
+
+#driver-card li{
+  list-style-type: none;
+}
+
+#driver-card-row {
+  background-color: yellow;
+  justify-content: center;
+}
+
+li{
+  color: black;
+  font-size: 14px;
+  text-align: center;
+}

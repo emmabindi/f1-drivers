@@ -1,13 +1,23 @@
-<%= render "top_nav" %>
-
+<div class="container">
 <h1>List of All Drivers:</h1>
 
 <ol>
-<% @drivers.each do |driver| %>
-  <%= link_to driver_path(driver) do %>
-  <li>Name:<%= driver.name %> | Team: <%= driver.team %></li>
-<% end %>
+  <div class="row" id="driver-card-row">
 
-    <img src="<%= driver.profile %>" alt="Photo">
-  <% end %>
-</ol>
+    <% @drivers.each do |driver| %>
+
+    <div class="col-sm-12 col-md-6 col-lg-4 box" id="driver-card">
+      <%= link_to driver_path(driver) do %>
+      <li>
+      <strong>Name: </strong><%= driver.name %><br> 
+      <strong>Team: </strong><%= driver.team %></li>
+      <img src="<%= driver.profile %>" alt="Photo">
+      <% end %>
+
+    </div>
+    <% end %>
+
+  </div>
+  </ol>
+</div>
+      

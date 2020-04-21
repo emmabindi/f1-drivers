@@ -1,26 +1,11 @@
 <h1>Show Page</h1>
 
-<%# need to fix this all up  %>
+<p>
+<strong>Name: </strong><%= @driver.name  %> <br> 
+<strong>Driving For: </strong><%= @driver.team %></p>
+<img src="<%= @driver.profile %>" alt="Photo">
 
-<%# <p>Name:<%= @driver.name %>  %>
-<%# | Team: <%= @driver.team %> %>
-</p>
-
-<%# <img src="<%= @driver.profile %>" 
-<%# alt="Photo"> %> %>
-<%# <% end %> %>
-
-
-<%# <p>
-  <strong>Name:</strong>
-  <%= @driver.name %>
-<%# </p> %>
- 
-<%# <p> %>
-  <%# <strong>Driving For:</strong> %>
-  <%# <%= @driver.team %> %>
-<%# </p> %> %>
-
+<br>
 <%= link_to "Update Driver", drivers_edit_path(@driver.id) %>
 
 <%= link_to "Delete Driver", driver_path(@driver.id), method: :delete, data: { confirm: "Are you sure?" } %>
