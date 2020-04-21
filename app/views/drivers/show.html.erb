@@ -1,15 +1,15 @@
 <div class="container">
 <h1>Show Page</h1>
 
-  <div class="container" id="driver-card-row">
-    <div id="driver-card">
-      <p>
+  <div class="driver-container">
+    <%# <div id="driver-card-single"> %>
+    <p>
       <strong>Name: </strong><%= @driver.name  %> <br> 
       <strong>Driving For: </strong><%= @driver.team %>
       </p>
-      <img src="<%= @driver.profile %>" alt="Photo">
+      <img id="driver-photo" src="<%= @driver.profile %>" alt="Photo">
     </div>
-  </div>
+  <%# </div> %>
 </div>
 
 <div class="options-buttons">
