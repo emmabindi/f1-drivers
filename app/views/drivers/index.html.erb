@@ -2,4 +2,12 @@
 
 <h1>List of All Drivers:</h1>
 
-<%= @drivers%>
+<ol>
+<% @drivers.each do |driver| %>
+  <%= link_to driver_path(driver) do %>
+  <li>Name:<%= driver.name %> | Team: <%= driver.team %></li>
+<% end %>
+
+    <img src="<%= driver.profile %>" alt="Photo">
+  <% end %>
+</ol>

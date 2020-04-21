@@ -1,0 +1,18 @@
+<h1>Edit Driver</h1>
+
+<form action="<%= driver_path(@driver.id) %>" method="POST" >
+  <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token" />
+
+    <input type="hidden" name="_method" value="put" />
+
+  <label>Name:</label>
+  <input type="text" name="driver[name]" value="<%= @driver["name"] %>" />
+
+  <label>Driving For:</label>
+  <input type="text" name="driver[team]" value="<%= @driver["team"] %>" />
+
+    <label>Profile Photo:</label>
+  <input type="text" name="driver[profile]" value="<%= @driver["profile"] %>" />
+
+  <input type="submit" value="Update" />
+</form>

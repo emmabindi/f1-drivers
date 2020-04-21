@@ -20,3 +20,18 @@
     <%= form.submit %>
   </p>
 <% end %>
+
+
+this is harrison's version:
+
+<form action="<%= drivers_path %>" method="POST" >
+  <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token" />
+
+  <label>Name</label>
+  <input type="text" name="driver[name]" />
+
+  <label>Team</label>
+  <input type="text" name="driver[team]" />
+
+  <input type="submit" value="Create" />
+</form>

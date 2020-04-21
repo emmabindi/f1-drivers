@@ -4,6 +4,8 @@ class CreateDrivers < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :team
       t.string :profile
+
+      # t.timestamps
     end
   end
 end

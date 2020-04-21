@@ -1,5 +1,16 @@
 <h1>Show Page</h1>
 
+<%# need to fix this all up  %>
+
+<%# <p>Name:<%= @driver.name %>  %>
+<%# | Team: <%= @driver.team %> %>
+</p>
+
+<%# <img src="<%= @driver.profile %>" 
+<%# alt="Photo"> %> %>
+<%# <% end %> %>
+
+
 <%# <p>
   <strong>Name:</strong>
   <%= @driver.name %>
@@ -9,3 +20,5 @@
   <%# <strong>Driving For:</strong> %>
   <%# <%= @driver.team %> %>
 <%# </p> %> %>
+
+<%= link_to "Delete Driver", driver_path(@driver.id), method: :delete, data: { confirm: "Are you sure?" } %>
