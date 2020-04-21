@@ -4,6 +4,11 @@ class DriversController < ApplicationController
   def index
     @drivers = Driver.all
   end
+
+  def new
+    # harrison had this in here but i didn't see it all 
+    # @driver = Driver.new?
+  end
   
   #Show single driver
   def show

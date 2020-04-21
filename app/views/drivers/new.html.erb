@@ -1,5 +1,6 @@
 <h1>Add New Driver</h1>
 
+<%# instread of scope harrison has model with @driver  %>
 <%= form_with scope: :driver, url: drivers_path, local: true do |form| %>
   <p>
     <%= form.label :name %><br>
@@ -22,16 +23,18 @@
 <% end %>
 
 
-this is harrison's version:
+<%# this is harrison's version html way: %>
 
-<form action="<%= drivers_path %>" method="POST" >
-  <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token" />
+<%# <form action="<%= drivers_path %>
+<%# " method="POST" > %> 
+  <%# <input type="hidden" value="<%= form_authenticity_token%>
+  <%# "name="authenticity_token" /> %>
 
-  <label>Name</label>
-  <input type="text" name="driver[name]" />
+  <%# <label>Name</label> %>
+  <%# <input type="text" name="driver[name]" /> %>
 
-  <label>Team</label>
-  <input type="text" name="driver[team]" />
+  <%# <label>Team</label> %>
+  <%# <input type="text" name="driver[team]" /> %>
 
-  <input type="submit" value="Create" />
-</form>
+  <%# <input type="submit" value="Create" /> %>
+<%# </form> %>

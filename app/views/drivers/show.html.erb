@@ -21,4 +21,8 @@
   <%# <%= @driver.team %> %>
 <%# </p> %> %>
 
+<%= link_to "Update Driver", drivers_edit_path(@driver.id) %>
+
 <%= link_to "Delete Driver", driver_path(@driver.id), method: :delete, data: { confirm: "Are you sure?" } %>
+
+<%= link_to "Back", :back %>
