@@ -1,13 +1,29 @@
+<div class="container">
 <h1>Show Page</h1>
 
-<p>
-<strong>Name: </strong><%= @driver.name  %> <br> 
-<strong>Driving For: </strong><%= @driver.team %></p>
-<img src="<%= @driver.profile %>" alt="Photo">
+  <div class="container" id="driver-card-row">
+    <div id="driver-card">
+      <p>
+      <strong>Name: </strong><%= @driver.name  %> <br> 
+      <strong>Driving For: </strong><%= @driver.team %>
+      </p>
+      <img src="<%= @driver.profile %>" alt="Photo">
+    </div>
+  </div>
+</div>
 
-<br>
-<%= link_to "Update Driver", drivers_edit_path(@driver.id) %>
+<div class="options-buttons">
 
-<%= link_to "Delete Driver", driver_path(@driver.id), method: :delete, data: { confirm: "Are you sure?" } %>
+<button type="button" class="btn btn-outline-secondary"><%= link_to "Update Driver", drivers_edit_path(@driver.id) %></button>
 
-<%= link_to "Back", :back %>
+<%# I HAVE LOST MY ARE YOU SURE FUNCTIONALITY  %>
+<button type="button" class="btn btn-outline-secondary"><%= link_to "Delete Driver", driver_path(@driver.id), method: :delete %></button>
+
+<button type="button" class="btn btn-outline-secondary"><%= link_to "Back", :back %></button>
+</div>
+
+<%# <%= link_to "Update Driver", drivers_edit_path(@driver.id) %>
+
+<%# <%= link_to "Delete Driver", driver_path(@driver.id), method: :delete, data: { confirm: "Are you sure?" } %> 
+
+<%# <%= link_to "Back", :back %>

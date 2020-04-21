@@ -2,19 +2,36 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-
-a {
-  // color: ;
-  text-decoration: none;
+// NAV BAR
+.navbar {
+  background-color: lightgrey;
+}
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
 }
 
+.navbar-brand {
+  color: red;
+}
+
+.nav-item {
+  padding: 0 25px;
+}
+
+// PAGE TITLES
+h1 {
+  font-size: 24px;
+  text-align: center;
+}
+
+// DRIVERS
 img {
   max-width: 190px;
   height: 190px;
 }
 
 .box {
-  border: 1px solid black;
   padding: 5px;
   margin: 5px;
   display: flex;
@@ -23,7 +40,6 @@ img {
 #driver-card {
   max-width: 200px;
   justify-content: center;
-  // background-color: red;
 }
 
 #driver-card li{
@@ -31,12 +47,23 @@ img {
 }
 
 #driver-card-row {
-  background-color: yellow;
   justify-content: center;
+  margin-bottom: 10px;
 }
 
 li{
   color: black;
-  font-size: 14px;
+  font-size: 13px;
   text-align: center;
+}
+
+// OPTIONS BUTTONS
+.options-buttons {
+  display: flex;
+  // background-color: cornflowerblue;
+}
+
+.btn {
+  margin: 0 10px;
+  font-size: 12px;
 }
